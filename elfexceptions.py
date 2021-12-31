@@ -16,7 +16,7 @@ def process_file(fname):
         for relocation in section.iter_relocations():
             symbol = symbol_table.get_symbol(relocation['r_info_sym'])
             if(symbol.name == "__cxa_allocate_exception"):
-                print("youpi found:",symbol.name)
+                #print("youpi found:",symbol.name)
                 return True
 
 
