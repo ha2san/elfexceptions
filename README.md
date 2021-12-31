@@ -1,3 +1,8 @@
+
+There is some test in the the test folder
+first write make and then run the ./test script
+
+
 I tried:
 * ltrace ./path
 * objdump -d ./path
