@@ -1,6 +1,6 @@
 
-There is some test in the the test folder
-first write make and then run the ./test script
+There is some test in the the test folder\
+go in the folder and write make and then run the ./test script
 
 
 I tried:
