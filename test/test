@@ -3,4 +3,5 @@ for f in bin/*;
 do 
   echo Processing $f ; 
   ../elfexceptions.py $f
+  echo
 done;

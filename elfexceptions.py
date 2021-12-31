@@ -7,6 +7,13 @@ from elftools.elf.relocation import RelocationSection
 
 def process_file(fname):
     with open(fname, 'rb') as f:
+        f.seek(0)
+        if f.read(4) != b"\x7fELF":#Are you an elf ? 
+            f.seek(0)
+            print("This is not an elf file")
+            return
+        f.seek(0)
+
         e = ELFFile(f)
         section = e.get_section_by_name(".rela.plt")
         #for section in e.iter_sections():
