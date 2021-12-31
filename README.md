@@ -1,14 +1,16 @@
 I tried:
-    ltrace ./path
-    objdump -d ./path
-    readelf -r ./path 
+* ltrace ./path
+* objdump -d ./path
+* readelf --relocs ./path 
 
 
-__cxa_begin_catch@plt
-__cxa_allocate_exception@plt in objdump
-__cxa_end_catch@plt
+recurence in binary with exception:
 
-output of readelf -r 
+    __cxa_begin_catch@plt
+    __cxa_allocate_exception@plt
+    __cxa_end_catch@plt
+
+output of readelf --relocs 
 
 binary with exception :
 
