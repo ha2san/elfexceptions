@@ -1,0 +1,1130 @@
+
+shapes:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000002000 <_init>:
+    2000:	f3 0f 1e fa          	endbr64 
+    2004:	48 83 ec 08          	sub    $0x8,%rsp
+    2008:	48 8b 05 d1 3f 00 00 	mov    0x3fd1(%rip),%rax        # 5fe0 <__gmon_start__>
+    200f:	48 85 c0             	test   %rax,%rax
+    2012:	74 02                	je     2016 <_init+0x16>
+    2014:	ff d0                	call   *%rax
+    2016:	48 83 c4 08          	add    $0x8,%rsp
+    201a:	c3                   	ret    
+
+Disassembly of section .plt:
+
+0000000000002020 <printf@plt-0x10>:
+    2020:	ff 35 e2 3f 00 00    	push   0x3fe2(%rip)        # 6008 <_GLOBAL_OFFSET_TABLE_+0x8>
+    2026:	ff 25 e4 3f 00 00    	jmp    *0x3fe4(%rip)        # 6010 <_GLOBAL_OFFSET_TABLE_+0x10>
+    202c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002030 <printf@plt>:
+    2030:	ff 25 e2 3f 00 00    	jmp    *0x3fe2(%rip)        # 6018 <printf@GLIBC_2.2.5>
+    2036:	68 00 00 00 00       	push   $0x0
+    203b:	e9 e0 ff ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002040 <__cxa_begin_catch@plt>:
+    2040:	ff 25 da 3f 00 00    	jmp    *0x3fda(%rip)        # 6020 <__cxa_begin_catch@CXXABI_1.3>
+    2046:	68 01 00 00 00       	push   $0x1
+    204b:	e9 d0 ff ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002050 <strlen@plt>:
+    2050:	ff 25 d2 3f 00 00    	jmp    *0x3fd2(%rip)        # 6028 <strlen@GLIBC_2.2.5>
+    2056:	68 02 00 00 00       	push   $0x2
+    205b:	e9 c0 ff ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002060 <__cxa_allocate_exception@plt>:
+    2060:	ff 25 ca 3f 00 00    	jmp    *0x3fca(%rip)        # 6030 <__cxa_allocate_exception@CXXABI_1.3>
+    2066:	68 03 00 00 00       	push   $0x3
+    206b:	e9 b0 ff ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002070 <calloc@plt>:
+    2070:	ff 25 c2 3f 00 00    	jmp    *0x3fc2(%rip)        # 6038 <calloc@GLIBC_2.2.5>
+    2076:	68 04 00 00 00       	push   $0x4
+    207b:	e9 a0 ff ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002080 <__cxa_free_exception@plt>:
+    2080:	ff 25 ba 3f 00 00    	jmp    *0x3fba(%rip)        # 6040 <__cxa_free_exception@CXXABI_1.3>
+    2086:	68 05 00 00 00       	push   $0x5
+    208b:	e9 90 ff ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002090 <sqrt@plt>:
+    2090:	ff 25 b2 3f 00 00    	jmp    *0x3fb2(%rip)        # 6048 <sqrt@GLIBC_2.2.5>
+    2096:	68 06 00 00 00       	push   $0x6
+    209b:	e9 80 ff ff ff       	jmp    2020 <_init+0x20>
+
+00000000000020a0 <__cxa_atexit@plt>:
+    20a0:	ff 25 aa 3f 00 00    	jmp    *0x3faa(%rip)        # 6050 <__cxa_atexit@GLIBC_2.2.5>
+    20a6:	68 07 00 00 00       	push   $0x7
+    20ab:	e9 70 ff ff ff       	jmp    2020 <_init+0x20>
+
+00000000000020b0 <strcpy@plt>:
+    20b0:	ff 25 a2 3f 00 00    	jmp    *0x3fa2(%rip)        # 6058 <strcpy@GLIBC_2.2.5>
+    20b6:	68 08 00 00 00       	push   $0x8
+    20bb:	e9 60 ff ff ff       	jmp    2020 <_init+0x20>
+
+00000000000020c0 <_ZdlPv@plt>:
+    20c0:	ff 25 9a 3f 00 00    	jmp    *0x3f9a(%rip)        # 6060 <_ZdlPv@GLIBCXX_3.4>
+    20c6:	68 09 00 00 00       	push   $0x9
+    20cb:	e9 50 ff ff ff       	jmp    2020 <_init+0x20>
+
+00000000000020d0 <_Znwm@plt>:
+    20d0:	ff 25 92 3f 00 00    	jmp    *0x3f92(%rip)        # 6068 <_Znwm@GLIBCXX_3.4>
+    20d6:	68 0a 00 00 00       	push   $0xa
+    20db:	e9 40 ff ff ff       	jmp    2020 <_init+0x20>
+
+00000000000020e0 <_ZNSt13runtime_errorD2Ev@plt>:
+    20e0:	ff 25 8a 3f 00 00    	jmp    *0x3f8a(%rip)        # 6070 <_ZNSt13runtime_errorD2Ev@GLIBCXX_3.4>
+    20e6:	68 0b 00 00 00       	push   $0xb
+    20eb:	e9 30 ff ff ff       	jmp    2020 <_init+0x20>
+
+00000000000020f0 <__dynamic_cast@plt>:
+    20f0:	ff 25 82 3f 00 00    	jmp    *0x3f82(%rip)        # 6078 <__dynamic_cast@CXXABI_1.3>
+    20f6:	68 0c 00 00 00       	push   $0xc
+    20fb:	e9 20 ff ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002100 <free@plt>:
+    2100:	ff 25 7a 3f 00 00    	jmp    *0x3f7a(%rip)        # 6080 <free@GLIBC_2.2.5>
+    2106:	68 0d 00 00 00       	push   $0xd
+    210b:	e9 10 ff ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002110 <_ZNKSt13runtime_error4whatEv@plt>:
+    2110:	ff 25 72 3f 00 00    	jmp    *0x3f72(%rip)        # 6088 <_ZNKSt13runtime_error4whatEv@GLIBCXX_3.4>
+    2116:	68 0e 00 00 00       	push   $0xe
+    211b:	e9 00 ff ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002120 <_ZNSt8ios_base4InitC1Ev@plt>:
+    2120:	ff 25 6a 3f 00 00    	jmp    *0x3f6a(%rip)        # 6090 <_ZNSt8ios_base4InitC1Ev@GLIBCXX_3.4>
+    2126:	68 0f 00 00 00       	push   $0xf
+    212b:	e9 f0 fe ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002130 <puts@plt>:
+    2130:	ff 25 62 3f 00 00    	jmp    *0x3f62(%rip)        # 6098 <puts@GLIBC_2.2.5>
+    2136:	68 10 00 00 00       	push   $0x10
+    213b:	e9 e0 fe ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002140 <snprintf@plt>:
+    2140:	ff 25 5a 3f 00 00    	jmp    *0x3f5a(%rip)        # 60a0 <snprintf@GLIBC_2.2.5>
+    2146:	68 11 00 00 00       	push   $0x11
+    214b:	e9 d0 fe ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002150 <__cxa_end_catch@plt>:
+    2150:	ff 25 52 3f 00 00    	jmp    *0x3f52(%rip)        # 60a8 <__cxa_end_catch@CXXABI_1.3>
+    2156:	68 12 00 00 00       	push   $0x12
+    215b:	e9 c0 fe ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002160 <__cxa_throw@plt>:
+    2160:	ff 25 4a 3f 00 00    	jmp    *0x3f4a(%rip)        # 60b0 <__cxa_throw@CXXABI_1.3>
+    2166:	68 13 00 00 00       	push   $0x13
+    216b:	e9 b0 fe ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002170 <_Unwind_Resume@plt>:
+    2170:	ff 25 42 3f 00 00    	jmp    *0x3f42(%rip)        # 60b8 <_Unwind_Resume@GCC_3.0>
+    2176:	68 14 00 00 00       	push   $0x14
+    217b:	e9 a0 fe ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002180 <_ZNSt13runtime_errorC2EPKc@plt>:
+    2180:	ff 25 3a 3f 00 00    	jmp    *0x3f3a(%rip)        # 60c0 <_ZNSt13runtime_errorC2EPKc@GLIBCXX_3.4.21>
+    2186:	68 15 00 00 00       	push   $0x15
+    218b:	e9 90 fe ff ff       	jmp    2020 <_init+0x20>
+
+0000000000002190 <_ZNSt16invalid_argumentC1EPKc@plt>:
+    2190:	ff 25 32 3f 00 00    	jmp    *0x3f32(%rip)        # 60c8 <_ZNSt16invalid_argumentC1EPKc@GLIBCXX_3.4.21>
+    2196:	68 16 00 00 00       	push   $0x16
+    219b:	e9 80 fe ff ff       	jmp    2020 <_init+0x20>
+
+Disassembly of section .text:
+
+00000000000021a0 <_GLOBAL__sub_I_shapes.cpp>:
+    21a0:	41 57                	push   %r15
+    21a2:	41 56                	push   %r14
+    21a4:	53                   	push   %rbx
+    21a5:	48 8d 1d 64 3f 00 00 	lea    0x3f64(%rip),%rbx        # 6110 <_ZStL8__ioinit>
+    21ac:	48 89 df             	mov    %rbx,%rdi
+    21af:	e8 6c ff ff ff       	call   2120 <_ZNSt8ios_base4InitC1Ev@plt>
+    21b4:	48 8b 3d 3d 3e 00 00 	mov    0x3e3d(%rip),%rdi        # 5ff8 <_ZNSt8ios_base4InitD1Ev@GLIBCXX_3.4>
+    21bb:	4c 8d 35 16 3f 00 00 	lea    0x3f16(%rip),%r14        # 60d8 <__dso_handle>
+    21c2:	48 89 de             	mov    %rbx,%rsi
+    21c5:	4c 89 f2             	mov    %r14,%rdx
+    21c8:	e8 d3 fe ff ff       	call   20a0 <__cxa_atexit@plt>
+    21cd:	48 8d 05 54 38 00 00 	lea    0x3854(%rip),%rax        # 5a28 <_ZTV6Circle+0x10>
+    21d4:	48 89 05 3d 3f 00 00 	mov    %rax,0x3f3d(%rip)        # 6118 <unitCircle>
+    21db:	4c 8d 3d 36 3f 00 00 	lea    0x3f36(%rip),%r15        # 6118 <unitCircle>
+    21e2:	c7 05 3c 3f 00 00 01 	movl   $0x1,0x3f3c(%rip)        # 6128 <unitCircle+0x10>
+    21e9:	00 00 00 
+    21ec:	48 8d 3d 1d 07 00 00 	lea    0x71d(%rip),%rdi        # 2910 <_ZN6ObjectD2Ev>
+    21f3:	4c 89 fe             	mov    %r15,%rsi
+    21f6:	4c 89 f2             	mov    %r14,%rdx
+    21f9:	e8 a2 fe ff ff       	call   20a0 <__cxa_atexit@plt>
+    21fe:	48 b8 01 00 00 00 01 	movabs $0x100000001,%rax
+    2205:	00 00 00 
+    2208:	48 89 05 31 3f 00 00 	mov    %rax,0x3f31(%rip)        # 6140 <unitSquare+0x10>
+    220f:	48 8d 1d 1a 3f 00 00 	lea    0x3f1a(%rip),%rbx        # 6130 <unitSquare>
+    2216:	c7 05 30 3f 00 00 04 	movl   $0x4,0x3f30(%rip)        # 6150 <unitSquare+0x20>
+    221d:	00 00 00 
+    2220:	48 8d 05 21 39 00 00 	lea    0x3921(%rip),%rax        # 5b48 <_ZTV6Square+0x10>
+    2227:	48 89 05 02 3f 00 00 	mov    %rax,0x3f02(%rip)        # 6130 <unitSquare>
+    222e:	48 8d 05 43 39 00 00 	lea    0x3943(%rip),%rax        # 5b78 <_ZTV6Square+0x40>
+    2235:	48 89 05 0c 3f 00 00 	mov    %rax,0x3f0c(%rip)        # 6148 <unitSquare+0x18>
+    223c:	48 8d 3d ad 05 00 00 	lea    0x5ad(%rip),%rdi        # 27f0 <_ZN6SquareD2Ev>
+    2243:	48 89 de             	mov    %rbx,%rsi
+    2246:	4c 89 f2             	mov    %r14,%rdx
+    2249:	e8 52 fe ff ff       	call   20a0 <__cxa_atexit@plt>
+    224e:	48 8d 35 ec 0f 00 00 	lea    0xfec(%rip),%rsi        # 3241 <_IO_stdin_used+0x241>
+    2255:	48 89 df             	mov    %rbx,%rdi
+    2258:	e8 d3 04 00 00       	call   2730 <_ZN6Object8set_nameEPKc>
+    225d:	48 8d 35 e9 0f 00 00 	lea    0xfe9(%rip),%rsi        # 324d <_IO_stdin_used+0x24d>
+    2264:	4c 89 ff             	mov    %r15,%rdi
+    2267:	5b                   	pop    %rbx
+    2268:	41 5e                	pop    %r14
+    226a:	41 5f                	pop    %r15
+    226c:	e9 bf 04 00 00       	jmp    2730 <_ZN6Object8set_nameEPKc>
+    2271:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2278:	00 00 00 
+    227b:	0f 1f 44 00 00       	nopl   0x0(%rax,%rax,1)
+
+0000000000002280 <_start>:
+    2280:	f3 0f 1e fa          	endbr64 
+    2284:	31 ed                	xor    %ebp,%ebp
+    2286:	49 89 d1             	mov    %rdx,%r9
+    2289:	5e                   	pop    %rsi
+    228a:	48 89 e2             	mov    %rsp,%rdx
+    228d:	48 83 e4 f0          	and    $0xfffffffffffffff0,%rsp
+    2291:	50                   	push   %rax
+    2292:	54                   	push   %rsp
+    2293:	4c 8d 05 f6 0b 00 00 	lea    0xbf6(%rip),%r8        # 2e90 <__libc_csu_fini>
+    229a:	48 8d 0d 7f 0b 00 00 	lea    0xb7f(%rip),%rcx        # 2e20 <__libc_csu_init>
+    22a1:	48 8d 3d 88 03 00 00 	lea    0x388(%rip),%rdi        # 2630 <main>
+    22a8:	ff 15 2a 3d 00 00    	call   *0x3d2a(%rip)        # 5fd8 <__libc_start_main@GLIBC_2.2.5>
+    22ae:	f4                   	hlt    
+    22af:	90                   	nop
+
+00000000000022b0 <deregister_tm_clones>:
+    22b0:	48 8d 3d 51 3e 00 00 	lea    0x3e51(%rip),%rdi        # 6108 <__TMC_END__>
+    22b7:	48 8d 05 4a 3e 00 00 	lea    0x3e4a(%rip),%rax        # 6108 <__TMC_END__>
+    22be:	48 39 f8             	cmp    %rdi,%rax
+    22c1:	74 15                	je     22d8 <deregister_tm_clones+0x28>
+    22c3:	48 8b 05 fe 3c 00 00 	mov    0x3cfe(%rip),%rax        # 5fc8 <_ITM_deregisterTMCloneTable>
+    22ca:	48 85 c0             	test   %rax,%rax
+    22cd:	74 09                	je     22d8 <deregister_tm_clones+0x28>
+    22cf:	ff e0                	jmp    *%rax
+    22d1:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    22d8:	c3                   	ret    
+    22d9:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+00000000000022e0 <register_tm_clones>:
+    22e0:	48 8d 3d 21 3e 00 00 	lea    0x3e21(%rip),%rdi        # 6108 <__TMC_END__>
+    22e7:	48 8d 35 1a 3e 00 00 	lea    0x3e1a(%rip),%rsi        # 6108 <__TMC_END__>
+    22ee:	48 29 fe             	sub    %rdi,%rsi
+    22f1:	48 89 f0             	mov    %rsi,%rax
+    22f4:	48 c1 ee 3f          	shr    $0x3f,%rsi
+    22f8:	48 c1 f8 03          	sar    $0x3,%rax
+    22fc:	48 01 c6             	add    %rax,%rsi
+    22ff:	48 d1 fe             	sar    %rsi
+    2302:	74 14                	je     2318 <register_tm_clones+0x38>
+    2304:	48 8b 05 dd 3c 00 00 	mov    0x3cdd(%rip),%rax        # 5fe8 <_ITM_registerTMCloneTable>
+    230b:	48 85 c0             	test   %rax,%rax
+    230e:	74 08                	je     2318 <register_tm_clones+0x38>
+    2310:	ff e0                	jmp    *%rax
+    2312:	66 0f 1f 44 00 00    	nopw   0x0(%rax,%rax,1)
+    2318:	c3                   	ret    
+    2319:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000002320 <__do_global_dtors_aux>:
+    2320:	f3 0f 1e fa          	endbr64 
+    2324:	80 3d dd 3d 00 00 00 	cmpb   $0x0,0x3ddd(%rip)        # 6108 <__TMC_END__>
+    232b:	75 33                	jne    2360 <__do_global_dtors_aux+0x40>
+    232d:	55                   	push   %rbp
+    232e:	48 83 3d 7a 3c 00 00 	cmpq   $0x0,0x3c7a(%rip)        # 5fb0 <__cxa_finalize@GLIBC_2.2.5>
+    2335:	00 
+    2336:	48 89 e5             	mov    %rsp,%rbp
+    2339:	74 0d                	je     2348 <__do_global_dtors_aux+0x28>
+    233b:	48 8b 3d 96 3d 00 00 	mov    0x3d96(%rip),%rdi        # 60d8 <__dso_handle>
+    2342:	ff 15 68 3c 00 00    	call   *0x3c68(%rip)        # 5fb0 <__cxa_finalize@GLIBC_2.2.5>
+    2348:	e8 63 ff ff ff       	call   22b0 <deregister_tm_clones>
+    234d:	c6 05 b4 3d 00 00 01 	movb   $0x1,0x3db4(%rip)        # 6108 <__TMC_END__>
+    2354:	5d                   	pop    %rbp
+    2355:	c3                   	ret    
+    2356:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    235d:	00 00 00 
+    2360:	c3                   	ret    
+    2361:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    2368:	00 00 00 00 
+    236c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002370 <frame_dummy>:
+    2370:	f3 0f 1e fa          	endbr64 
+    2374:	e9 67 ff ff ff       	jmp    22e0 <register_tm_clones>
+    2379:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+
+0000000000002380 <_Z11createshapec>:
+    2380:	41 56                	push   %r14
+    2382:	53                   	push   %rbx
+    2383:	50                   	push   %rax
+    2384:	83 c7 bd             	add    $0xffffffbd,%edi
+    2387:	83 ff 11             	cmp    $0x11,%edi
+    238a:	0f 87 a2 01 00 00    	ja     2532 <_Z11createshapec+0x1b2>
+    2390:	48 8d 05 6d 0c 00 00 	lea    0xc6d(%rip),%rax        # 3004 <_IO_stdin_used+0x4>
+    2397:	48 63 0c b8          	movslq (%rax,%rdi,4),%rcx
+    239b:	48 01 c1             	add    %rax,%rcx
+    239e:	ff e1                	jmp    *%rcx
+    23a0:	bf 18 00 00 00       	mov    $0x18,%edi
+    23a5:	e8 26 fd ff ff       	call   20d0 <_Znwm@plt>
+    23aa:	48 89 c3             	mov    %rax,%rbx
+    23ad:	48 8d 05 74 36 00 00 	lea    0x3674(%rip),%rax        # 5a28 <_ZTV6Circle+0x10>
+    23b4:	48 89 03             	mov    %rax,(%rbx)
+    23b7:	c7 43 10 04 00 00 00 	movl   $0x4,0x10(%rbx)
+    23be:	48 8d 35 8d 0e 00 00 	lea    0xe8d(%rip),%rsi        # 3252 <_IO_stdin_used+0x252>
+    23c5:	e9 55 01 00 00       	jmp    251f <_Z11createshapec+0x19f>
+    23ca:	bf 20 00 00 00       	mov    $0x20,%edi
+    23cf:	e8 fc fc ff ff       	call   20d0 <_Znwm@plt>
+    23d4:	48 89 c3             	mov    %rax,%rbx
+    23d7:	48 b8 01 00 00 00 02 	movabs $0x200000001,%rax
+    23de:	00 00 00 
+    23e1:	48 89 43 18          	mov    %rax,0x18(%rbx)
+    23e5:	48 8d 05 04 39 00 00 	lea    0x3904(%rip),%rax        # 5cf0 <_ZTV8Pentagon+0x10>
+    23ec:	48 89 03             	mov    %rax,(%rbx)
+    23ef:	48 8d 05 2a 39 00 00 	lea    0x392a(%rip),%rax        # 5d20 <_ZTV8Pentagon+0x40>
+    23f6:	48 89 43 10          	mov    %rax,0x10(%rbx)
+    23fa:	48 8d 35 9c 0d 00 00 	lea    0xd9c(%rip),%rsi        # 319d <_IO_stdin_used+0x19d>
+    2401:	e9 19 01 00 00       	jmp    251f <_Z11createshapec+0x19f>
+    2406:	bf 20 00 00 00       	mov    $0x20,%edi
+    240b:	e8 c0 fc ff ff       	call   20d0 <_Znwm@plt>
+    2410:	48 89 c3             	mov    %rax,%rbx
+    2413:	48 b8 06 00 00 00 c8 	movabs $0xc800000006,%rax
+    241a:	00 00 00 
+    241d:	48 89 43 18          	mov    %rax,0x18(%rbx)
+    2421:	48 8d 05 40 38 00 00 	lea    0x3840(%rip),%rax        # 5c68 <_ZTV7Hexagon+0x10>
+    2428:	48 89 03             	mov    %rax,(%rbx)
+    242b:	48 8d 05 66 38 00 00 	lea    0x3866(%rip),%rax        # 5c98 <_ZTV7Hexagon+0x40>
+    2432:	48 89 43 10          	mov    %rax,0x10(%rbx)
+    2436:	48 8d 35 5c 0c 00 00 	lea    0xc5c(%rip),%rsi        # 3099 <_IO_stdin_used+0x99>
+    243d:	e9 dd 00 00 00       	jmp    251f <_Z11createshapec+0x19f>
+    2442:	bf 18 00 00 00       	mov    $0x18,%edi
+    2447:	e8 84 fc ff ff       	call   20d0 <_Znwm@plt>
+    244c:	48 89 c3             	mov    %rax,%rbx
+    244f:	48 8d 05 c2 36 00 00 	lea    0x36c2(%rip),%rax        # 5b18 <_ZTV13Parallelogram+0x10>
+    2456:	48 89 03             	mov    %rax,(%rbx)
+    2459:	48 b8 05 00 00 00 09 	movabs $0x900000005,%rax
+    2460:	00 00 00 
+    2463:	48 89 43 10          	mov    %rax,0x10(%rbx)
+    2467:	48 8d 35 14 0c 00 00 	lea    0xc14(%rip),%rsi        # 3082 <_IO_stdin_used+0x82>
+    246e:	e9 ac 00 00 00       	jmp    251f <_Z11createshapec+0x19f>
+    2473:	bf 18 00 00 00       	mov    $0x18,%edi
+    2478:	e8 53 fc ff ff       	call   20d0 <_Znwm@plt>
+    247d:	48 89 c3             	mov    %rax,%rbx
+    2480:	48 b8 06 00 00 00 0a 	movabs $0xa00000006,%rax
+    2487:	00 00 00 
+    248a:	48 89 43 10          	mov    %rax,0x10(%rbx)
+    248e:	48 8d 05 23 36 00 00 	lea    0x3623(%rip),%rax        # 5ab8 <_ZTV9Rectangle+0x10>
+    2495:	48 89 03             	mov    %rax,(%rbx)
+    2498:	48 8d 35 d9 0b 00 00 	lea    0xbd9(%rip),%rsi        # 3078 <_IO_stdin_used+0x78>
+    249f:	eb 7e                	jmp    251f <_Z11createshapec+0x19f>
+    24a1:	bf 28 00 00 00       	mov    $0x28,%edi
+    24a6:	e8 25 fc ff ff       	call   20d0 <_Znwm@plt>
+    24ab:	48 89 c3             	mov    %rax,%rbx
+    24ae:	48 b8 0a 00 00 00 0a 	movabs $0xa0000000a,%rax
+    24b5:	00 00 00 
+    24b8:	48 89 43 10          	mov    %rax,0x10(%rbx)
+    24bc:	c7 43 20 04 00 00 00 	movl   $0x4,0x20(%rbx)
+    24c3:	48 8d 05 7e 36 00 00 	lea    0x367e(%rip),%rax        # 5b48 <_ZTV6Square+0x10>
+    24ca:	48 89 03             	mov    %rax,(%rbx)
+    24cd:	48 8d 05 a4 36 00 00 	lea    0x36a4(%rip),%rax        # 5b78 <_ZTV6Square+0x40>
+    24d4:	48 89 43 18          	mov    %rax,0x18(%rbx)
+    24d8:	48 8d 35 67 0d 00 00 	lea    0xd67(%rip),%rsi        # 3246 <_IO_stdin_used+0x246>
+    24df:	eb 3e                	jmp    251f <_Z11createshapec+0x19f>
+    24e1:	bf 28 00 00 00       	mov    $0x28,%edi
+    24e6:	e8 e5 fb ff ff       	call   20d0 <_Znwm@plt>
+    24eb:	48 89 c3             	mov    %rax,%rbx
+    24ee:	c7 40 18 03 00 00 00 	movl   $0x3,0x18(%rax)
+    24f5:	48 8d 05 e4 36 00 00 	lea    0x36e4(%rip),%rax        # 5be0 <_ZTV8Triangle+0x10>
+    24fc:	48 89 03             	mov    %rax,(%rbx)
+    24ff:	48 8d 05 0a 37 00 00 	lea    0x370a(%rip),%rax        # 5c10 <_ZTV8Triangle+0x40>
+    2506:	48 89 43 10          	mov    %rax,0x10(%rbx)
+    250a:	48 b8 05 00 00 00 09 	movabs $0x900000005,%rax
+    2511:	00 00 00 
+    2514:	48 89 43 1c          	mov    %rax,0x1c(%rbx)
+    2518:	48 8d 35 71 0b 00 00 	lea    0xb71(%rip),%rsi        # 3090 <_IO_stdin_used+0x90>
+    251f:	48 89 df             	mov    %rbx,%rdi
+    2522:	e8 09 02 00 00       	call   2730 <_ZN6Object8set_nameEPKc>
+    2527:	48 89 d8             	mov    %rbx,%rax
+    252a:	48 83 c4 08          	add    $0x8,%rsp
+    252e:	5b                   	pop    %rbx
+    252f:	41 5e                	pop    %r14
+    2531:	c3                   	ret    
+    2532:	bf 18 04 00 00       	mov    $0x418,%edi
+    2537:	e8 24 fb ff ff       	call   2060 <__cxa_allocate_exception@plt>
+    253c:	48 89 c3             	mov    %rax,%rbx
+    253f:	48 8d 15 60 0c 00 00 	lea    0xc60(%rip),%rdx        # 31a6 <_IO_stdin_used+0x1a6>
+    2546:	48 89 c7             	mov    %rax,%rdi
+    2549:	be 66 00 00 00       	mov    $0x66,%esi
+    254e:	e8 6d 02 00 00       	call   27c0 <_ZN17ShapeProgramErrorC2EiPKc>
+    2553:	48 8d 35 86 34 00 00 	lea    0x3486(%rip),%rsi        # 59e0 <_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3>
+    255a:	48 8b 15 57 3a 00 00 	mov    0x3a57(%rip),%rdx        # 5fb8 <_ZNSt13runtime_errorD2Ev@GLIBCXX_3.4>
+    2561:	48 89 df             	mov    %rbx,%rdi
+    2564:	e8 f7 fb ff ff       	call   2160 <__cxa_throw@plt>
+    2569:	49 89 c6             	mov    %rax,%r14
+    256c:	48 89 df             	mov    %rbx,%rdi
+    256f:	e8 0c fb ff ff       	call   2080 <__cxa_free_exception@plt>
+    2574:	4c 89 f7             	mov    %r14,%rdi
+    2577:	e8 f4 fb ff ff       	call   2170 <_Unwind_Resume@plt>
+    257c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002580 <_Z14printshapedataP5Shape>:
+    2580:	41 56                	push   %r14
+    2582:	53                   	push   %rbx
+    2583:	50                   	push   %rax
+    2584:	48 89 fb             	mov    %rdi,%rbx
+    2587:	48 8b 07             	mov    (%rdi),%rax
+    258a:	4c 8b 77 08          	mov    0x8(%rdi),%r14
+    258e:	ff 50 10             	call   *0x10(%rax)
+    2591:	f2 0f 11 04 24       	movsd  %xmm0,(%rsp)
+    2596:	48 8b 03             	mov    (%rbx),%rax
+    2599:	48 89 df             	mov    %rbx,%rdi
+    259c:	ff 50 18             	call   *0x18(%rax)
+    259f:	0f 28 c8             	movaps %xmm0,%xmm1
+    25a2:	48 8d 3d 10 0c 00 00 	lea    0xc10(%rip),%rdi        # 31b9 <_IO_stdin_used+0x1b9>
+    25a9:	4c 89 f6             	mov    %r14,%rsi
+    25ac:	f2 0f 10 04 24       	movsd  (%rsp),%xmm0
+    25b1:	b0 02                	mov    $0x2,%al
+    25b3:	48 83 c4 08          	add    $0x8,%rsp
+    25b7:	5b                   	pop    %rbx
+    25b8:	41 5e                	pop    %r14
+    25ba:	e9 71 fa ff ff       	jmp    2030 <printf@plt>
+    25bf:	eb 00                	jmp    25c1 <_Z14printshapedataP5Shape+0x41>
+    25c1:	83 fa 03             	cmp    $0x3,%edx
+    25c4:	74 2c                	je     25f2 <_Z14printshapedataP5Shape+0x72>
+    25c6:	83 fa 02             	cmp    $0x2,%edx
+    25c9:	75 22                	jne    25ed <_Z14printshapedataP5Shape+0x6d>
+    25cb:	48 89 c7             	mov    %rax,%rdi
+    25ce:	e8 6d fa ff ff       	call   2040 <__cxa_begin_catch@plt>
+    25d3:	48 89 c3             	mov    %rax,%rbx
+    25d6:	48 8d 3d 7c 0c 00 00 	lea    0xc7c(%rip),%rdi        # 3259 <_IO_stdin_used+0x259>
+    25dd:	e8 4e fb ff ff       	call   2130 <puts@plt>
+    25e2:	48 8b 03             	mov    (%rbx),%rax
+    25e5:	48 89 df             	mov    %rbx,%rdi
+    25e8:	ff 50 10             	call   *0x10(%rax)
+    25eb:	eb 16                	jmp    2603 <_Z14printshapedataP5Shape+0x83>
+    25ed:	83 fa 01             	cmp    $0x1,%edx
+    25f0:	75 2e                	jne    2620 <_Z14printshapedataP5Shape+0xa0>
+    25f2:	48 89 c7             	mov    %rax,%rdi
+    25f5:	e8 46 fa ff ff       	call   2040 <__cxa_begin_catch@plt>
+    25fa:	48 8b 08             	mov    (%rax),%rcx
+    25fd:	48 89 c7             	mov    %rax,%rdi
+    2600:	ff 51 10             	call   *0x10(%rcx)
+    2603:	48 8d 3d 34 0c 00 00 	lea    0xc34(%rip),%rdi        # 323e <_IO_stdin_used+0x23e>
+    260a:	48 89 c6             	mov    %rax,%rsi
+    260d:	31 c0                	xor    %eax,%eax
+    260f:	e8 1c fa ff ff       	call   2030 <printf@plt>
+    2614:	48 83 c4 08          	add    $0x8,%rsp
+    2618:	5b                   	pop    %rbx
+    2619:	41 5e                	pop    %r14
+    261b:	e9 30 fb ff ff       	jmp    2150 <__cxa_end_catch@plt>
+    2620:	48 89 c7             	mov    %rax,%rdi
+    2623:	e8 48 fb ff ff       	call   2170 <_Unwind_Resume@plt>
+    2628:	0f 1f 84 00 00 00 00 	nopl   0x0(%rax,%rax,1)
+    262f:	00 
+
+0000000000002630 <main>:
+    2630:	41 56                	push   %r14
+    2632:	53                   	push   %rbx
+    2633:	50                   	push   %rax
+    2634:	83 ff 02             	cmp    $0x2,%edi
+    2637:	75 6e                	jne    26a7 <main+0x77>
+    2639:	48 8b 5e 08          	mov    0x8(%rsi),%rbx
+    263d:	48 89 df             	mov    %rbx,%rdi
+    2640:	e8 0b fa ff ff       	call   2050 <strlen@plt>
+    2645:	48 83 f8 01          	cmp    $0x1,%rax
+    2649:	75 65                	jne    26b0 <main+0x80>
+    264b:	0f be 3b             	movsbl (%rbx),%edi
+    264e:	45 31 f6             	xor    %r14d,%r14d
+    2651:	e8 2a fd ff ff       	call   2380 <_Z11createshapec>
+    2656:	48 89 c3             	mov    %rax,%rbx
+    2659:	49 89 c6             	mov    %rax,%r14
+    265c:	48 89 c7             	mov    %rax,%rdi
+    265f:	e8 1c ff ff ff       	call   2580 <_Z14printshapedataP5Shape>
+    2664:	48 8d 3d 34 0c 00 00 	lea    0xc34(%rip),%rdi        # 329f <_IO_stdin_used+0x29f>
+    266b:	e8 c0 fa ff ff       	call   2130 <puts@plt>
+    2670:	48 8d 3d a1 3a 00 00 	lea    0x3aa1(%rip),%rdi        # 6118 <unitCircle>
+    2677:	49 89 de             	mov    %rbx,%r14
+    267a:	e8 01 ff ff ff       	call   2580 <_Z14printshapedataP5Shape>
+    267f:	48 8d 3d 32 0c 00 00 	lea    0xc32(%rip),%rdi        # 32b8 <_IO_stdin_used+0x2b8>
+    2686:	e8 a5 fa ff ff       	call   2130 <puts@plt>
+    268b:	48 8d 3d 9e 3a 00 00 	lea    0x3a9e(%rip),%rdi        # 6130 <unitSquare>
+    2692:	49 89 de             	mov    %rbx,%r14
+    2695:	e8 e6 fe ff ff       	call   2580 <_Z14printshapedataP5Shape>
+    269a:	49 8b 06             	mov    (%r14),%rax
+    269d:	4c 89 f7             	mov    %r14,%rdi
+    26a0:	ff 50 08             	call   *0x8(%rax)
+    26a3:	31 c0                	xor    %eax,%eax
+    26a5:	eb 1a                	jmp    26c1 <main+0x91>
+    26a7:	48 8d 3d 49 0c 00 00 	lea    0xc49(%rip),%rdi        # 32f7 <_IO_stdin_used+0x2f7>
+    26ae:	eb 07                	jmp    26b7 <main+0x87>
+    26b0:	48 8d 3d 1a 0c 00 00 	lea    0xc1a(%rip),%rdi        # 32d1 <_IO_stdin_used+0x2d1>
+    26b7:	e8 74 fa ff ff       	call   2130 <puts@plt>
+    26bc:	b8 ff ff ff ff       	mov    $0xffffffff,%eax
+    26c1:	48 83 c4 08          	add    $0x8,%rsp
+    26c5:	5b                   	pop    %rbx
+    26c6:	41 5e                	pop    %r14
+    26c8:	c3                   	ret    
+    26c9:	48 89 c7             	mov    %rax,%rdi
+    26cc:	83 fa 01             	cmp    $0x1,%edx
+    26cf:	75 59                	jne    272a <main+0xfa>
+    26d1:	e8 6a f9 ff ff       	call   2040 <__cxa_begin_catch@plt>
+    26d6:	48 89 c3             	mov    %rax,%rbx
+    26d9:	48 85 c0             	test   %rax,%rax
+    26dc:	74 28                	je     2706 <main+0xd6>
+    26de:	48 8b 35 0b 39 00 00 	mov    0x390b(%rip),%rsi        # 5ff0 <_ZTISt13runtime_error@GLIBCXX_3.4>
+    26e5:	48 8d 15 f4 32 00 00 	lea    0x32f4(%rip),%rdx        # 59e0 <_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3>
+    26ec:	48 89 df             	mov    %rbx,%rdi
+    26ef:	31 c9                	xor    %ecx,%ecx
+    26f1:	e8 fa f9 ff ff       	call   20f0 <__dynamic_cast@plt>
+    26f6:	48 85 c0             	test   %rax,%rax
+    26f9:	74 0b                	je     2706 <main+0xd6>
+    26fb:	48 8b 08             	mov    (%rax),%rcx
+    26fe:	48 89 c7             	mov    %rax,%rdi
+    2701:	ff 51 10             	call   *0x10(%rcx)
+    2704:	eb 09                	jmp    270f <main+0xdf>
+    2706:	48 8b 03             	mov    (%rbx),%rax
+    2709:	48 89 df             	mov    %rbx,%rdi
+    270c:	ff 50 10             	call   *0x10(%rax)
+    270f:	48 89 c7             	mov    %rax,%rdi
+    2712:	e8 19 fa ff ff       	call   2130 <puts@plt>
+    2717:	e8 34 fa ff ff       	call   2150 <__cxa_end_catch@plt>
+    271c:	4d 85 f6             	test   %r14,%r14
+    271f:	0f 85 75 ff ff ff    	jne    269a <main+0x6a>
+    2725:	e9 79 ff ff ff       	jmp    26a3 <main+0x73>
+    272a:	e8 41 fa ff ff       	call   2170 <_Unwind_Resume@plt>
+    272f:	90                   	nop
+
+0000000000002730 <_ZN6Object8set_nameEPKc>:
+    2730:	41 56                	push   %r14
+    2732:	53                   	push   %rbx
+    2733:	50                   	push   %rax
+    2734:	48 89 f3             	mov    %rsi,%rbx
+    2737:	49 89 fe             	mov    %rdi,%r14
+    273a:	48 89 f7             	mov    %rsi,%rdi
+    273d:	e8 0e f9 ff ff       	call   2050 <strlen@plt>
+    2742:	48 3d 00 01 00 00    	cmp    $0x100,%rax
+    2748:	73 28                	jae    2772 <_ZN6Object8set_nameEPKc+0x42>
+    274a:	48 83 c0 01          	add    $0x1,%rax
+    274e:	be 01 00 00 00       	mov    $0x1,%esi
+    2753:	48 89 c7             	mov    %rax,%rdi
+    2756:	e8 15 f9 ff ff       	call   2070 <calloc@plt>
+    275b:	49 89 46 08          	mov    %rax,0x8(%r14)
+    275f:	48 89 c7             	mov    %rax,%rdi
+    2762:	48 89 de             	mov    %rbx,%rsi
+    2765:	e8 46 f9 ff ff       	call   20b0 <strcpy@plt>
+    276a:	48 83 c4 08          	add    $0x8,%rsp
+    276e:	5b                   	pop    %rbx
+    276f:	41 5e                	pop    %r14
+    2771:	c3                   	ret    
+    2772:	bf 18 04 00 00       	mov    $0x418,%edi
+    2777:	e8 e4 f8 ff ff       	call   2060 <__cxa_allocate_exception@plt>
+    277c:	48 89 c3             	mov    %rax,%rbx
+    277f:	48 8d 15 63 0a 00 00 	lea    0xa63(%rip),%rdx        # 31e9 <_IO_stdin_used+0x1e9>
+    2786:	48 89 c7             	mov    %rax,%rdi
+    2789:	be 65 00 00 00       	mov    $0x65,%esi
+    278e:	e8 2d 00 00 00       	call   27c0 <_ZN17ShapeProgramErrorC2EiPKc>
+    2793:	48 8d 35 46 32 00 00 	lea    0x3246(%rip),%rsi        # 59e0 <_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3>
+    279a:	48 8b 15 17 38 00 00 	mov    0x3817(%rip),%rdx        # 5fb8 <_ZNSt13runtime_errorD2Ev@GLIBCXX_3.4>
+    27a1:	48 89 df             	mov    %rbx,%rdi
+    27a4:	e8 b7 f9 ff ff       	call   2160 <__cxa_throw@plt>
+    27a9:	49 89 c6             	mov    %rax,%r14
+    27ac:	48 89 df             	mov    %rbx,%rdi
+    27af:	e8 cc f8 ff ff       	call   2080 <__cxa_free_exception@plt>
+    27b4:	4c 89 f7             	mov    %r14,%rdi
+    27b7:	e8 b4 f9 ff ff       	call   2170 <_Unwind_Resume@plt>
+    27bc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000000027c0 <_ZN17ShapeProgramErrorC2EiPKc>:
+    27c0:	55                   	push   %rbp
+    27c1:	53                   	push   %rbx
+    27c2:	50                   	push   %rax
+    27c3:	89 f5                	mov    %esi,%ebp
+    27c5:	48 89 fb             	mov    %rdi,%rbx
+    27c8:	48 89 d6             	mov    %rdx,%rsi
+    27cb:	e8 b0 f9 ff ff       	call   2180 <_ZNSt13runtime_errorC2EPKc@plt>
+    27d0:	89 6b 10             	mov    %ebp,0x10(%rbx)
+    27d3:	48 8d 05 9e 35 00 00 	lea    0x359e(%rip),%rax        # 5d78 <_ZNSt13runtime_errorD2Ev@GLIBCXX_3.4>
+    27da:	48 89 03             	mov    %rax,(%rbx)
+    27dd:	48 83 c4 08          	add    $0x8,%rsp
+    27e1:	5b                   	pop    %rbx
+    27e2:	5d                   	pop    %rbp
+    27e3:	c3                   	ret    
+    27e4:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    27eb:	00 00 00 
+    27ee:	66 90                	xchg   %ax,%ax
+
+00000000000027f0 <_ZN6SquareD2Ev>:
+    27f0:	53                   	push   %rbx
+    27f1:	48 89 fb             	mov    %rdi,%rbx
+    27f4:	48 8d 05 9d 32 00 00 	lea    0x329d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    27fb:	48 89 07             	mov    %rax,(%rdi)
+    27fe:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2802:	48 85 ff             	test   %rdi,%rdi
+    2805:	74 0d                	je     2814 <_ZN6SquareD2Ev+0x24>
+    2807:	e8 f4 f8 ff ff       	call   2100 <free@plt>
+    280c:	48 c7 43 08 00 00 00 	movq   $0x0,0x8(%rbx)
+    2813:	00 
+    2814:	5b                   	pop    %rbx
+    2815:	c3                   	ret    
+    2816:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    281d:	00 00 00 
+
+0000000000002820 <_ZN6CircleD0Ev>:
+    2820:	53                   	push   %rbx
+    2821:	48 89 fb             	mov    %rdi,%rbx
+    2824:	48 8d 05 6d 32 00 00 	lea    0x326d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    282b:	48 89 07             	mov    %rax,(%rdi)
+    282e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2832:	48 85 ff             	test   %rdi,%rdi
+    2835:	74 05                	je     283c <_ZN6CircleD0Ev+0x1c>
+    2837:	e8 c4 f8 ff ff       	call   2100 <free@plt>
+    283c:	48 89 df             	mov    %rbx,%rdi
+    283f:	5b                   	pop    %rbx
+    2840:	e9 7b f8 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2845:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    284c:	00 00 00 
+    284f:	90                   	nop
+
+0000000000002850 <_ZN6Circle4areaEv>:
+    2850:	f2 0f 2a 47 10       	cvtsi2sdl 0x10(%rdi),%xmm0
+    2855:	f2 0f 59 c0          	mulsd  %xmm0,%xmm0
+    2859:	f2 0f 59 05 ef 07 00 	mulsd  0x7ef(%rip),%xmm0        # 3050 <_IO_stdin_used+0x50>
+    2860:	00 
+    2861:	c3                   	ret    
+    2862:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2869:	00 00 00 
+    286c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002870 <_ZN6Circle13circumferenceEv>:
+    2870:	8b 47 10             	mov    0x10(%rdi),%eax
+    2873:	01 c0                	add    %eax,%eax
+    2875:	f2 0f 2a c0          	cvtsi2sd %eax,%xmm0
+    2879:	f2 0f 59 05 d7 07 00 	mulsd  0x7d7(%rip),%xmm0        # 3058 <_IO_stdin_used+0x58>
+    2880:	00 
+    2881:	c3                   	ret    
+    2882:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2889:	00 00 00 
+    288c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002890 <_ZN6ObjectD0Ev>:
+    2890:	53                   	push   %rbx
+    2891:	48 89 fb             	mov    %rdi,%rbx
+    2894:	48 8d 05 fd 31 00 00 	lea    0x31fd(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    289b:	48 89 07             	mov    %rax,(%rdi)
+    289e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    28a2:	48 85 ff             	test   %rdi,%rdi
+    28a5:	74 05                	je     28ac <_ZN6ObjectD0Ev+0x1c>
+    28a7:	e8 54 f8 ff ff       	call   2100 <free@plt>
+    28ac:	48 89 df             	mov    %rbx,%rdi
+    28af:	5b                   	pop    %rbx
+    28b0:	e9 0b f8 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    28b5:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    28bc:	00 00 00 
+    28bf:	90                   	nop
+
+00000000000028c0 <_ZN9RectangleD0Ev>:
+    28c0:	53                   	push   %rbx
+    28c1:	48 89 fb             	mov    %rdi,%rbx
+    28c4:	48 8d 05 cd 31 00 00 	lea    0x31cd(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    28cb:	48 89 07             	mov    %rax,(%rdi)
+    28ce:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    28d2:	48 85 ff             	test   %rdi,%rdi
+    28d5:	74 05                	je     28dc <_ZN9RectangleD0Ev+0x1c>
+    28d7:	e8 24 f8 ff ff       	call   2100 <free@plt>
+    28dc:	48 89 df             	mov    %rbx,%rdi
+    28df:	5b                   	pop    %rbx
+    28e0:	e9 db f7 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    28e5:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    28ec:	00 00 00 
+    28ef:	90                   	nop
+
+00000000000028f0 <_ZN13Parallelogram4areaEv>:
+    28f0:	8b 47 14             	mov    0x14(%rdi),%eax
+    28f3:	0f af 47 10          	imul   0x10(%rdi),%eax
+    28f7:	f2 0f 2a c0          	cvtsi2sd %eax,%xmm0
+    28fb:	c3                   	ret    
+    28fc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002900 <_ZN13Parallelogram13circumferenceEv>:
+    2900:	8b 47 14             	mov    0x14(%rdi),%eax
+    2903:	03 47 10             	add    0x10(%rdi),%eax
+    2906:	01 c0                	add    %eax,%eax
+    2908:	f2 0f 2a c0          	cvtsi2sd %eax,%xmm0
+    290c:	c3                   	ret    
+    290d:	0f 1f 00             	nopl   (%rax)
+
+0000000000002910 <_ZN6ObjectD2Ev>:
+    2910:	53                   	push   %rbx
+    2911:	48 89 fb             	mov    %rdi,%rbx
+    2914:	48 8d 05 7d 31 00 00 	lea    0x317d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    291b:	48 89 07             	mov    %rax,(%rdi)
+    291e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2922:	48 85 ff             	test   %rdi,%rdi
+    2925:	74 0d                	je     2934 <_ZN6ObjectD2Ev+0x24>
+    2927:	e8 d4 f7 ff ff       	call   2100 <free@plt>
+    292c:	48 c7 43 08 00 00 00 	movq   $0x0,0x8(%rbx)
+    2933:	00 
+    2934:	5b                   	pop    %rbx
+    2935:	c3                   	ret    
+    2936:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    293d:	00 00 00 
+
+0000000000002940 <_ZN13ParallelogramD0Ev>:
+    2940:	53                   	push   %rbx
+    2941:	48 89 fb             	mov    %rdi,%rbx
+    2944:	48 8d 05 4d 31 00 00 	lea    0x314d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    294b:	48 89 07             	mov    %rax,(%rdi)
+    294e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2952:	48 85 ff             	test   %rdi,%rdi
+    2955:	74 05                	je     295c <_ZN13ParallelogramD0Ev+0x1c>
+    2957:	e8 a4 f7 ff ff       	call   2100 <free@plt>
+    295c:	48 89 df             	mov    %rbx,%rdi
+    295f:	5b                   	pop    %rbx
+    2960:	e9 5b f7 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2965:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    296c:	00 00 00 
+    296f:	90                   	nop
+
+0000000000002970 <_ZN6SquareD0Ev>:
+    2970:	53                   	push   %rbx
+    2971:	48 89 fb             	mov    %rdi,%rbx
+    2974:	48 8d 05 1d 31 00 00 	lea    0x311d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    297b:	48 89 07             	mov    %rax,(%rdi)
+    297e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2982:	48 85 ff             	test   %rdi,%rdi
+    2985:	74 05                	je     298c <_ZN6SquareD0Ev+0x1c>
+    2987:	e8 74 f7 ff ff       	call   2100 <free@plt>
+    298c:	48 89 df             	mov    %rbx,%rdi
+    298f:	5b                   	pop    %rbx
+    2990:	e9 2b f7 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2995:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    299c:	00 00 00 
+    299f:	90                   	nop
+
+00000000000029a0 <_ZN6Square13circumferenceEv>:
+    29a0:	8b 47 10             	mov    0x10(%rdi),%eax
+    29a3:	0f af 47 20          	imul   0x20(%rdi),%eax
+    29a7:	f2 0f 2a c0          	cvtsi2sd %eax,%xmm0
+    29ab:	c3                   	ret    
+    29ac:	0f 1f 40 00          	nopl   0x0(%rax)
+
+00000000000029b0 <_ZThn24_N6SquareD1Ev>:
+    29b0:	53                   	push   %rbx
+    29b1:	48 89 fb             	mov    %rdi,%rbx
+    29b4:	48 8d 05 dd 30 00 00 	lea    0x30dd(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    29bb:	48 89 47 e8          	mov    %rax,-0x18(%rdi)
+    29bf:	48 8b 7f f0          	mov    -0x10(%rdi),%rdi
+    29c3:	48 85 ff             	test   %rdi,%rdi
+    29c6:	74 0d                	je     29d5 <_ZThn24_N6SquareD1Ev+0x25>
+    29c8:	e8 33 f7 ff ff       	call   2100 <free@plt>
+    29cd:	48 c7 43 f0 00 00 00 	movq   $0x0,-0x10(%rbx)
+    29d4:	00 
+    29d5:	5b                   	pop    %rbx
+    29d6:	c3                   	ret    
+    29d7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    29de:	00 00 
+
+00000000000029e0 <_ZThn24_N6SquareD0Ev>:
+    29e0:	53                   	push   %rbx
+    29e1:	48 8d 5f e8          	lea    -0x18(%rdi),%rbx
+    29e5:	48 8d 05 ac 30 00 00 	lea    0x30ac(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    29ec:	48 89 47 e8          	mov    %rax,-0x18(%rdi)
+    29f0:	48 8b 7f f0          	mov    -0x10(%rdi),%rdi
+    29f4:	48 85 ff             	test   %rdi,%rdi
+    29f7:	74 05                	je     29fe <_ZThn24_N6SquareD0Ev+0x1e>
+    29f9:	e8 02 f7 ff ff       	call   2100 <free@plt>
+    29fe:	48 89 df             	mov    %rbx,%rdi
+    2a01:	5b                   	pop    %rbx
+    2a02:	e9 b9 f6 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2a07:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    2a0e:	00 00 
+
+0000000000002a10 <_ZN8TriangleD2Ev>:
+    2a10:	53                   	push   %rbx
+    2a11:	48 89 fb             	mov    %rdi,%rbx
+    2a14:	48 8d 05 7d 30 00 00 	lea    0x307d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2a1b:	48 89 07             	mov    %rax,(%rdi)
+    2a1e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2a22:	48 85 ff             	test   %rdi,%rdi
+    2a25:	74 0d                	je     2a34 <_ZN8TriangleD2Ev+0x24>
+    2a27:	e8 d4 f6 ff ff       	call   2100 <free@plt>
+    2a2c:	48 c7 43 08 00 00 00 	movq   $0x0,0x8(%rbx)
+    2a33:	00 
+    2a34:	5b                   	pop    %rbx
+    2a35:	c3                   	ret    
+    2a36:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2a3d:	00 00 00 
+
+0000000000002a40 <_ZN8TriangleD0Ev>:
+    2a40:	53                   	push   %rbx
+    2a41:	48 89 fb             	mov    %rdi,%rbx
+    2a44:	48 8d 05 4d 30 00 00 	lea    0x304d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2a4b:	48 89 07             	mov    %rax,(%rdi)
+    2a4e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2a52:	48 85 ff             	test   %rdi,%rdi
+    2a55:	74 05                	je     2a5c <_ZN8TriangleD0Ev+0x1c>
+    2a57:	e8 a4 f6 ff ff       	call   2100 <free@plt>
+    2a5c:	48 89 df             	mov    %rbx,%rdi
+    2a5f:	5b                   	pop    %rbx
+    2a60:	e9 5b f6 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2a65:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2a6c:	00 00 00 
+    2a6f:	90                   	nop
+
+0000000000002a70 <_ZN8Triangle4areaEv>:
+    2a70:	f2 0f 2a 4f 1c       	cvtsi2sdl 0x1c(%rdi),%xmm1
+    2a75:	f2 0f 59 0d e3 05 00 	mulsd  0x5e3(%rip),%xmm1        # 3060 <_IO_stdin_used+0x60>
+    2a7c:	00 
+    2a7d:	f2 0f 2a 47 20       	cvtsi2sdl 0x20(%rdi),%xmm0
+    2a82:	f2 0f 59 c1          	mulsd  %xmm1,%xmm0
+    2a86:	c3                   	ret    
+    2a87:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    2a8e:	00 00 
+
+0000000000002a90 <_ZN8Triangle13circumferenceEv>:
+    2a90:	41 56                	push   %r14
+    2a92:	53                   	push   %rbx
+    2a93:	50                   	push   %rax
+    2a94:	bf 18 04 00 00       	mov    $0x418,%edi
+    2a99:	e8 c2 f5 ff ff       	call   2060 <__cxa_allocate_exception@plt>
+    2a9e:	48 89 c3             	mov    %rax,%rbx
+    2aa1:	48 8d 15 5a 07 00 00 	lea    0x75a(%rip),%rdx        # 3202 <_IO_stdin_used+0x202>
+    2aa8:	48 89 c7             	mov    %rax,%rdi
+    2aab:	be 64 00 00 00       	mov    $0x64,%esi
+    2ab0:	e8 0b fd ff ff       	call   27c0 <_ZN17ShapeProgramErrorC2EiPKc>
+    2ab5:	48 8d 35 24 2f 00 00 	lea    0x2f24(%rip),%rsi        # 59e0 <_ZTVN10__cxxabiv121__vmi_class_type_infoE@CXXABI_1.3>
+    2abc:	48 8b 15 f5 34 00 00 	mov    0x34f5(%rip),%rdx        # 5fb8 <_ZNSt13runtime_errorD2Ev@GLIBCXX_3.4>
+    2ac3:	48 89 df             	mov    %rbx,%rdi
+    2ac6:	e8 95 f6 ff ff       	call   2160 <__cxa_throw@plt>
+    2acb:	49 89 c6             	mov    %rax,%r14
+    2ace:	48 89 df             	mov    %rbx,%rdi
+    2ad1:	e8 aa f5 ff ff       	call   2080 <__cxa_free_exception@plt>
+    2ad6:	4c 89 f7             	mov    %r14,%rdi
+    2ad9:	e8 92 f6 ff ff       	call   2170 <_Unwind_Resume@plt>
+    2ade:	66 90                	xchg   %ax,%ax
+
+0000000000002ae0 <_ZThn16_N8TriangleD1Ev>:
+    2ae0:	53                   	push   %rbx
+    2ae1:	48 89 fb             	mov    %rdi,%rbx
+    2ae4:	48 8d 05 ad 2f 00 00 	lea    0x2fad(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2aeb:	48 89 47 f0          	mov    %rax,-0x10(%rdi)
+    2aef:	48 8b 7f f8          	mov    -0x8(%rdi),%rdi
+    2af3:	48 85 ff             	test   %rdi,%rdi
+    2af6:	74 0d                	je     2b05 <_ZThn16_N8TriangleD1Ev+0x25>
+    2af8:	e8 03 f6 ff ff       	call   2100 <free@plt>
+    2afd:	48 c7 43 f8 00 00 00 	movq   $0x0,-0x8(%rbx)
+    2b04:	00 
+    2b05:	5b                   	pop    %rbx
+    2b06:	c3                   	ret    
+    2b07:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    2b0e:	00 00 
+
+0000000000002b10 <_ZThn16_N8TriangleD0Ev>:
+    2b10:	53                   	push   %rbx
+    2b11:	48 8d 5f f0          	lea    -0x10(%rdi),%rbx
+    2b15:	48 8d 05 7c 2f 00 00 	lea    0x2f7c(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2b1c:	48 89 47 f0          	mov    %rax,-0x10(%rdi)
+    2b20:	48 8b 7f f8          	mov    -0x8(%rdi),%rdi
+    2b24:	48 85 ff             	test   %rdi,%rdi
+    2b27:	74 05                	je     2b2e <_ZThn16_N8TriangleD0Ev+0x1e>
+    2b29:	e8 d2 f5 ff ff       	call   2100 <free@plt>
+    2b2e:	48 89 df             	mov    %rbx,%rdi
+    2b31:	5b                   	pop    %rbx
+    2b32:	e9 89 f5 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2b37:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    2b3e:	00 00 
+
+0000000000002b40 <_ZN7HexagonD2Ev>:
+    2b40:	53                   	push   %rbx
+    2b41:	48 89 fb             	mov    %rdi,%rbx
+    2b44:	48 8d 05 4d 2f 00 00 	lea    0x2f4d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2b4b:	48 89 07             	mov    %rax,(%rdi)
+    2b4e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2b52:	48 85 ff             	test   %rdi,%rdi
+    2b55:	74 0d                	je     2b64 <_ZN7HexagonD2Ev+0x24>
+    2b57:	e8 a4 f5 ff ff       	call   2100 <free@plt>
+    2b5c:	48 c7 43 08 00 00 00 	movq   $0x0,0x8(%rbx)
+    2b63:	00 
+    2b64:	5b                   	pop    %rbx
+    2b65:	c3                   	ret    
+    2b66:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2b6d:	00 00 00 
+
+0000000000002b70 <_ZN7HexagonD0Ev>:
+    2b70:	53                   	push   %rbx
+    2b71:	48 89 fb             	mov    %rdi,%rbx
+    2b74:	48 8d 05 1d 2f 00 00 	lea    0x2f1d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2b7b:	48 89 07             	mov    %rax,(%rdi)
+    2b7e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2b82:	48 85 ff             	test   %rdi,%rdi
+    2b85:	74 05                	je     2b8c <_ZN7HexagonD0Ev+0x1c>
+    2b87:	e8 74 f5 ff ff       	call   2100 <free@plt>
+    2b8c:	48 89 df             	mov    %rbx,%rdi
+    2b8f:	5b                   	pop    %rbx
+    2b90:	e9 2b f5 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2b95:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2b9c:	00 00 00 
+    2b9f:	90                   	nop
+
+0000000000002ba0 <_ZN7Hexagon4areaEv>:
+    2ba0:	f2 0f 2a 47 1c       	cvtsi2sdl 0x1c(%rdi),%xmm0
+    2ba5:	f2 0f 59 c0          	mulsd  %xmm0,%xmm0
+    2ba9:	f2 0f 59 05 b7 04 00 	mulsd  0x4b7(%rip),%xmm0        # 3068 <_IO_stdin_used+0x68>
+    2bb0:	00 
+    2bb1:	c3                   	ret    
+    2bb2:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2bb9:	00 00 00 
+    2bbc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002bc0 <_ZN7Hexagon13circumferenceEv>:
+    2bc0:	8b 47 1c             	mov    0x1c(%rdi),%eax
+    2bc3:	0f af 47 18          	imul   0x18(%rdi),%eax
+    2bc7:	f2 0f 2a c0          	cvtsi2sd %eax,%xmm0
+    2bcb:	c3                   	ret    
+    2bcc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002bd0 <_ZThn16_N7HexagonD1Ev>:
+    2bd0:	53                   	push   %rbx
+    2bd1:	48 89 fb             	mov    %rdi,%rbx
+    2bd4:	48 8d 05 bd 2e 00 00 	lea    0x2ebd(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2bdb:	48 89 47 f0          	mov    %rax,-0x10(%rdi)
+    2bdf:	48 8b 7f f8          	mov    -0x8(%rdi),%rdi
+    2be3:	48 85 ff             	test   %rdi,%rdi
+    2be6:	74 0d                	je     2bf5 <_ZThn16_N7HexagonD1Ev+0x25>
+    2be8:	e8 13 f5 ff ff       	call   2100 <free@plt>
+    2bed:	48 c7 43 f8 00 00 00 	movq   $0x0,-0x8(%rbx)
+    2bf4:	00 
+    2bf5:	5b                   	pop    %rbx
+    2bf6:	c3                   	ret    
+    2bf7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    2bfe:	00 00 
+
+0000000000002c00 <_ZThn16_N7HexagonD0Ev>:
+    2c00:	53                   	push   %rbx
+    2c01:	48 8d 5f f0          	lea    -0x10(%rdi),%rbx
+    2c05:	48 8d 05 8c 2e 00 00 	lea    0x2e8c(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2c0c:	48 89 47 f0          	mov    %rax,-0x10(%rdi)
+    2c10:	48 8b 7f f8          	mov    -0x8(%rdi),%rdi
+    2c14:	48 85 ff             	test   %rdi,%rdi
+    2c17:	74 05                	je     2c1e <_ZThn16_N7HexagonD0Ev+0x1e>
+    2c19:	e8 e2 f4 ff ff       	call   2100 <free@plt>
+    2c1e:	48 89 df             	mov    %rbx,%rdi
+    2c21:	5b                   	pop    %rbx
+    2c22:	e9 99 f4 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2c27:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    2c2e:	00 00 
+
+0000000000002c30 <_ZN8PentagonD2Ev>:
+    2c30:	53                   	push   %rbx
+    2c31:	48 89 fb             	mov    %rdi,%rbx
+    2c34:	48 8d 05 5d 2e 00 00 	lea    0x2e5d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2c3b:	48 89 07             	mov    %rax,(%rdi)
+    2c3e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2c42:	48 85 ff             	test   %rdi,%rdi
+    2c45:	74 0d                	je     2c54 <_ZN8PentagonD2Ev+0x24>
+    2c47:	e8 b4 f4 ff ff       	call   2100 <free@plt>
+    2c4c:	48 c7 43 08 00 00 00 	movq   $0x0,0x8(%rbx)
+    2c53:	00 
+    2c54:	5b                   	pop    %rbx
+    2c55:	c3                   	ret    
+    2c56:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2c5d:	00 00 00 
+
+0000000000002c60 <_ZN8PentagonD0Ev>:
+    2c60:	53                   	push   %rbx
+    2c61:	48 89 fb             	mov    %rdi,%rbx
+    2c64:	48 8d 05 2d 2e 00 00 	lea    0x2e2d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2c6b:	48 89 07             	mov    %rax,(%rdi)
+    2c6e:	48 8b 7f 08          	mov    0x8(%rdi),%rdi
+    2c72:	48 85 ff             	test   %rdi,%rdi
+    2c75:	74 05                	je     2c7c <_ZN8PentagonD0Ev+0x1c>
+    2c77:	e8 84 f4 ff ff       	call   2100 <free@plt>
+    2c7c:	48 89 df             	mov    %rbx,%rdi
+    2c7f:	5b                   	pop    %rbx
+    2c80:	e9 3b f4 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2c85:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2c8c:	00 00 00 
+    2c8f:	90                   	nop
+
+0000000000002c90 <_ZN8Pentagon4areaEv>:
+    2c90:	41 56                	push   %r14
+    2c92:	53                   	push   %rbx
+    2c93:	50                   	push   %rax
+    2c94:	8b 47 18             	mov    0x18(%rdi),%eax
+    2c97:	89 c1                	mov    %eax,%ecx
+    2c99:	83 c1 ff             	add    $0xffffffff,%ecx
+    2c9c:	74 62                	je     2d00 <_ZN8Pentagon4areaEv+0x70>
+    2c9e:	48 89 fb             	mov    %rdi,%rbx
+    2ca1:	31 d2                	xor    %edx,%edx
+    2ca3:	83 f8 03             	cmp    $0x3,%eax
+    2ca6:	0f 42 d1             	cmovb  %ecx,%edx
+    2ca9:	f2 0f 2a d2          	cvtsi2sd %edx,%xmm2
+    2cad:	f2 0f 2a c8          	cvtsi2sd %eax,%xmm1
+    2cb1:	f2 0f 10 05 b7 03 00 	movsd  0x3b7(%rip),%xmm0        # 3070 <_IO_stdin_used+0x70>
+    2cb8:	00 
+    2cb9:	f2 0f 58 c1          	addsd  %xmm1,%xmm0
+    2cbd:	f2 0f 59 c1          	mulsd  %xmm1,%xmm0
+    2cc1:	66 0f 57 c9          	xorpd  %xmm1,%xmm1
+    2cc5:	66 0f 2e c1          	ucomisd %xmm1,%xmm0
+    2cc9:	72 06                	jb     2cd1 <_ZN8Pentagon4areaEv+0x41>
+    2ccb:	f2 0f 51 c0          	sqrtsd %xmm0,%xmm0
+    2ccf:	eb 0f                	jmp    2ce0 <_ZN8Pentagon4areaEv+0x50>
+    2cd1:	f2 0f 11 14 24       	movsd  %xmm2,(%rsp)
+    2cd6:	e8 b5 f3 ff ff       	call   2090 <sqrt@plt>
+    2cdb:	f2 0f 10 14 24       	movsd  (%rsp),%xmm2
+    2ce0:	f2 0f 59 c2          	mulsd  %xmm2,%xmm0
+    2ce4:	0f 57 c9             	xorps  %xmm1,%xmm1
+    2ce7:	f2 0f 2a 4b 1c       	cvtsi2sdl 0x1c(%rbx),%xmm1
+    2cec:	f2 0f 59 c9          	mulsd  %xmm1,%xmm1
+    2cf0:	f2 0f 59 c8          	mulsd  %xmm0,%xmm1
+    2cf4:	66 0f 28 c1          	movapd %xmm1,%xmm0
+    2cf8:	48 83 c4 08          	add    $0x8,%rsp
+    2cfc:	5b                   	pop    %rbx
+    2cfd:	41 5e                	pop    %r14
+    2cff:	c3                   	ret    
+    2d00:	bf 10 00 00 00       	mov    $0x10,%edi
+    2d05:	e8 56 f3 ff ff       	call   2060 <__cxa_allocate_exception@plt>
+    2d0a:	48 89 c3             	mov    %rax,%rbx
+    2d0d:	48 8d 35 fe 04 00 00 	lea    0x4fe(%rip),%rsi        # 3212 <_IO_stdin_used+0x212>
+    2d14:	48 89 c7             	mov    %rax,%rdi
+    2d17:	e8 74 f4 ff ff       	call   2190 <_ZNSt16invalid_argumentC1EPKc@plt>
+    2d1c:	48 8b 35 ad 32 00 00 	mov    0x32ad(%rip),%rsi        # 5fd0 <_ZTISt16invalid_argument@GLIBCXX_3.4>
+    2d23:	48 8b 15 96 32 00 00 	mov    0x3296(%rip),%rdx        # 5fc0 <_ZNSt16invalid_argumentD1Ev@GLIBCXX_3.4>
+    2d2a:	48 89 df             	mov    %rbx,%rdi
+    2d2d:	e8 2e f4 ff ff       	call   2160 <__cxa_throw@plt>
+    2d32:	49 89 c6             	mov    %rax,%r14
+    2d35:	48 89 df             	mov    %rbx,%rdi
+    2d38:	e8 43 f3 ff ff       	call   2080 <__cxa_free_exception@plt>
+    2d3d:	4c 89 f7             	mov    %r14,%rdi
+    2d40:	e8 2b f4 ff ff       	call   2170 <_Unwind_Resume@plt>
+    2d45:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2d4c:	00 00 00 
+    2d4f:	90                   	nop
+
+0000000000002d50 <_ZN8Pentagon13circumferenceEv>:
+    2d50:	8b 47 1c             	mov    0x1c(%rdi),%eax
+    2d53:	0f af 47 18          	imul   0x18(%rdi),%eax
+    2d57:	f2 0f 2a c0          	cvtsi2sd %eax,%xmm0
+    2d5b:	c3                   	ret    
+    2d5c:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002d60 <_ZThn16_N8PentagonD1Ev>:
+    2d60:	53                   	push   %rbx
+    2d61:	48 89 fb             	mov    %rdi,%rbx
+    2d64:	48 8d 05 2d 2d 00 00 	lea    0x2d2d(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2d6b:	48 89 47 f0          	mov    %rax,-0x10(%rdi)
+    2d6f:	48 8b 7f f8          	mov    -0x8(%rdi),%rdi
+    2d73:	48 85 ff             	test   %rdi,%rdi
+    2d76:	74 0d                	je     2d85 <_ZThn16_N8PentagonD1Ev+0x25>
+    2d78:	e8 83 f3 ff ff       	call   2100 <free@plt>
+    2d7d:	48 c7 43 f8 00 00 00 	movq   $0x0,-0x8(%rbx)
+    2d84:	00 
+    2d85:	5b                   	pop    %rbx
+    2d86:	c3                   	ret    
+    2d87:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    2d8e:	00 00 
+
+0000000000002d90 <_ZThn16_N8PentagonD0Ev>:
+    2d90:	53                   	push   %rbx
+    2d91:	48 8d 5f f0          	lea    -0x10(%rdi),%rbx
+    2d95:	48 8d 05 fc 2c 00 00 	lea    0x2cfc(%rip),%rax        # 5a98 <_ZTV6Object+0x10>
+    2d9c:	48 89 47 f0          	mov    %rax,-0x10(%rdi)
+    2da0:	48 8b 7f f8          	mov    -0x8(%rdi),%rdi
+    2da4:	48 85 ff             	test   %rdi,%rdi
+    2da7:	74 05                	je     2dae <_ZThn16_N8PentagonD0Ev+0x1e>
+    2da9:	e8 52 f3 ff ff       	call   2100 <free@plt>
+    2dae:	48 89 df             	mov    %rbx,%rdi
+    2db1:	5b                   	pop    %rbx
+    2db2:	e9 09 f3 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2db7:	66 0f 1f 84 00 00 00 	nopw   0x0(%rax,%rax,1)
+    2dbe:	00 00 
+
+0000000000002dc0 <_ZN17ShapeProgramErrorD0Ev>:
+    2dc0:	53                   	push   %rbx
+    2dc1:	48 89 fb             	mov    %rdi,%rbx
+    2dc4:	e8 17 f3 ff ff       	call   20e0 <_ZNSt13runtime_errorD2Ev@plt>
+    2dc9:	48 89 df             	mov    %rbx,%rdi
+    2dcc:	5b                   	pop    %rbx
+    2dcd:	e9 ee f2 ff ff       	jmp    20c0 <_ZdlPv@plt>
+    2dd2:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2dd9:	00 00 00 
+    2ddc:	0f 1f 40 00          	nopl   0x0(%rax)
+
+0000000000002de0 <_ZNK17ShapeProgramError4whatEv>:
+    2de0:	55                   	push   %rbp
+    2de1:	53                   	push   %rbx
+    2de2:	50                   	push   %rax
+    2de3:	48 8d 5f 14          	lea    0x14(%rdi),%rbx
+    2de7:	8b 6f 10             	mov    0x10(%rdi),%ebp
+    2dea:	e8 21 f3 ff ff       	call   2110 <_ZNKSt13runtime_error4whatEv@plt>
+    2def:	48 8d 15 39 04 00 00 	lea    0x439(%rip),%rdx        # 322f <_IO_stdin_used+0x22f>
+    2df6:	be 01 04 00 00       	mov    $0x401,%esi
+    2dfb:	48 89 df             	mov    %rbx,%rdi
+    2dfe:	89 e9                	mov    %ebp,%ecx
+    2e00:	49 89 c0             	mov    %rax,%r8
+    2e03:	31 c0                	xor    %eax,%eax
+    2e05:	e8 36 f3 ff ff       	call   2140 <snprintf@plt>
+    2e0a:	48 89 d8             	mov    %rbx,%rax
+    2e0d:	48 83 c4 08          	add    $0x8,%rsp
+    2e11:	5b                   	pop    %rbx
+    2e12:	5d                   	pop    %rbp
+    2e13:	c3                   	ret    
+    2e14:	66 2e 0f 1f 84 00 00 	cs nopw 0x0(%rax,%rax,1)
+    2e1b:	00 00 00 
+    2e1e:	66 90                	xchg   %ax,%ax
+
+0000000000002e20 <__libc_csu_init>:
+    2e20:	f3 0f 1e fa          	endbr64 
+    2e24:	41 57                	push   %r15
+    2e26:	4c 8d 3d 8b 2b 00 00 	lea    0x2b8b(%rip),%r15        # 59b8 <__frame_dummy_init_array_entry>
+    2e2d:	41 56                	push   %r14
+    2e2f:	49 89 d6             	mov    %rdx,%r14
+    2e32:	41 55                	push   %r13
+    2e34:	49 89 f5             	mov    %rsi,%r13
+    2e37:	41 54                	push   %r12
+    2e39:	41 89 fc             	mov    %edi,%r12d
+    2e3c:	55                   	push   %rbp
+    2e3d:	48 8d 2d 84 2b 00 00 	lea    0x2b84(%rip),%rbp        # 59c8 <__do_global_dtors_aux_fini_array_entry>
+    2e44:	53                   	push   %rbx
+    2e45:	4c 29 fd             	sub    %r15,%rbp
+    2e48:	48 83 ec 08          	sub    $0x8,%rsp
+    2e4c:	e8 af f1 ff ff       	call   2000 <_init>
+    2e51:	48 c1 fd 03          	sar    $0x3,%rbp
+    2e55:	74 1f                	je     2e76 <__libc_csu_init+0x56>
+    2e57:	31 db                	xor    %ebx,%ebx
+    2e59:	0f 1f 80 00 00 00 00 	nopl   0x0(%rax)
+    2e60:	4c 89 f2             	mov    %r14,%rdx
+    2e63:	4c 89 ee             	mov    %r13,%rsi
+    2e66:	44 89 e7             	mov    %r12d,%edi
+    2e69:	41 ff 14 df          	call   *(%r15,%rbx,8)
+    2e6d:	48 83 c3 01          	add    $0x1,%rbx
+    2e71:	48 39 dd             	cmp    %rbx,%rbp
+    2e74:	75 ea                	jne    2e60 <__libc_csu_init+0x40>
+    2e76:	48 83 c4 08          	add    $0x8,%rsp
+    2e7a:	5b                   	pop    %rbx
+    2e7b:	5d                   	pop    %rbp
+    2e7c:	41 5c                	pop    %r12
+    2e7e:	41 5d                	pop    %r13
+    2e80:	41 5e                	pop    %r14
+    2e82:	41 5f                	pop    %r15
+    2e84:	c3                   	ret    
+    2e85:	66 66 2e 0f 1f 84 00 	data16 cs nopw 0x0(%rax,%rax,1)
+    2e8c:	00 00 00 00 
+
+0000000000002e90 <__libc_csu_fini>:
+    2e90:	f3 0f 1e fa          	endbr64 
+    2e94:	c3                   	ret    
+
+Disassembly of section .fini:
+
+0000000000002e98 <_fini>:
+    2e98:	f3 0f 1e fa          	endbr64 
+    2e9c:	48 83 ec 08          	sub    $0x8,%rsp
+    2ea0:	48 83 c4 08          	add    $0x8,%rsp
+    2ea4:	c3                   	ret    

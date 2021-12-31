@@ -1,0 +1,26 @@
+
+TARGETS=shapes-except shapes.s
+
+CXX=clang++
+
+LDFLAGS=-v -fPIC -fPIE -pie -g
+CXXFLAGS=-v -std=c++20 -Wall -Werror -fPIC -fPIE -g -D_FORTIFY_SOURCE=1 -O2
+
+CXX_SFLAGS=-std=c++20 -Wall -Werror -fPIC -fPIE
+
+.PHONY: clean
+
+all: $(TARGETS)
+	mv shapes-except ../bin/
+
+clean:
+	rm -rf *.o $(TARGETS)
+
+shapes-except: shapes.o
+	$(CXX) $(LDFLAGS) $< -o $@
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -o $@ -c $^
+
+shapes.s: shapes.cpp
+	$(CXX) $(CXX_SFLAGS) -masm=intel -S -o $@ -c $^
