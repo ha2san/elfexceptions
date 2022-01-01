@@ -1,5 +1,5 @@
 
-There is some test in the the test folder\
+There are some tests in the the test folder\
 go in the folder and write make and then run the ./test script
 
 
